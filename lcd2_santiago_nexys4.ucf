@@ -1,0 +1,38 @@
+## This file is a general .ucf for the Nexys4 DDR Rev C board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = #IO_L12P_T1_MRCC_35,					Sch name = clk100mhz
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+## Buttons
+#NET "cpu_resetn"     LOC=C12 | IOSTANDARD=LVCMOS33; #IO_L3P_T0_DQS_AD1P_15
+
+NET "reset"           LOC=N17 | IOSTANDARD=LVCMOS33; # btnc
+#NET "btnd"           LOC=P18 | IOSTANDARD=LVCMOS33; # btnd
+NET "m1"           LOC=P17 | IOSTANDARD=LVCMOS33; # btnl
+NET "m2"           LOC=M17 | IOSTANDARD=LVCMOS33; # btnr
+#NET "btnu"           LOC=M18 | IOSTANDARD=LVCMOS33; # btnu
+
+## Pmod Header JC
+NET "rs"          LOC=K1 | IOSTANDARD=LVCMOS33; # jc(1)
+NET "rw"          LOC=F6 | IOSTANDARD=LVCMOS33; # jc(2)
+NET "e"          LOC=J2 | IOSTANDARD=LVCMOS33; # jc(3)
+#NET "jc<4>"          LOC=G6 | IOSTANDARD=LVCMOS33; # jc(4)
+#NET "jc<7>"          LOC=E7 | IOSTANDARD=LVCMOS33; # jc(7)
+#NET "jc<8>"          LOC=J3 | IOSTANDARD=LVCMOS33; # jc(8)
+#NET "jc<9>"          LOC=J4 | IOSTANDARD=LVCMOS33; # jc(9)
+#NET "jc<10>"         LOC=E6 | IOSTANDARD=LVCMOS33; # jc(10)
+
+## Pmod Header JD
+NET "db<0>"          LOC=H4 | IOSTANDARD=LVCMOS33; # jd(1)
+NET "db<1>"          LOC=H1 | IOSTANDARD=LVCMOS33; # jd(2)
+NET "db<2>"          LOC=G1 | IOSTANDARD=LVCMOS33; # jd(3)
+NET "db<3>"          LOC=G3 | IOSTANDARD=LVCMOS33; # jd(4)
+NET "db<4>"          LOC=H2 | IOSTANDARD=LVCMOS33; # jd(7)
+NET "db<5>"          LOC=G4 | IOSTANDARD=LVCMOS33; # jd(8)
+NET "db<6>"          LOC=G2 | IOSTANDARD=LVCMOS33; # jd(9)
+NET "db<7>"         LOC=F3 | IOSTANDARD=LVCMOS33; # jd(10)
