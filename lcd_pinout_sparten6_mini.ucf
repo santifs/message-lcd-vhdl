@@ -1,0 +1,28 @@
+// ROHIT D H
+// 4CB18EC055
+// Canara Engineering College
+// Assignment -- clock pulse usage
+
+
+NET clk    LOC = P87 | IOSTANDARD = LVCMOS33; 
+
+    
+NET lcd_rs  LOC = P2      | IOSTANDARD = LVCMOS33; 
+NET lcd_rw  LOC = P144  | IOSTANDARD = LVCMOS33;  
+NET lcd_e  LOC = P142  | IOSTANDARD = LVCMOS33; 
+
+
+
+
+NET data(0) LOC = P138 | IOSTANDARD = LVCMOS33;  
+NET data(1) LOC = P134 | IOSTANDARD = LVCMOS33; 
+NET data(2) LOC = P132 | IOSTANDARD = LVCMOS33; 
+NET data(3) LOC = P124 | IOSTANDARD = LVCMOS33;
+ 
+ 
+NET data(4) LOC = P121 | IOSTANDARD = LVCMOS33; 
+NET data(5) LOC = P119 | IOSTANDARD = LVCMOS33; 
+NET data(6) LOC = P115 | IOSTANDARD = LVCMOS33;
+NET data(7) LOC = P112 | IOSTANDARD = LVCMOS33; 
+
+ 
